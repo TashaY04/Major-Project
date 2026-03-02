@@ -28,8 +28,7 @@ const ResultsPage = ({ results, userData, onNewAssessment }) => {
     sleep_hours: 7,
     sleep_quality: 1,
     weight_change_kg: 0,
-    forced_drug_class: '',
-    smoker: Boolean(userData?.smoker)
+    forced_drug_class: ''
   });
   const [whatIfResult, setWhatIfResult] = useState(null);
   const [whatIfLoading, setWhatIfLoading] = useState(false);
@@ -92,8 +91,7 @@ const ResultsPage = ({ results, userData, onNewAssessment }) => {
       sleep_hours: 7,
       sleep_quality: 1,
       weight_change_kg: 0,
-      forced_drug_class: '',
-      smoker: Boolean(userData?.smoker)
+      forced_drug_class: ''
     });
     setWhatIfResult(null);
     setWhatIfError('');
@@ -350,14 +348,6 @@ const ResultsPage = ({ results, userData, onNewAssessment }) => {
                   />
                 </label>
 
-                <label className="what-if-control checkbox">
-                  <input
-                    type="checkbox"
-                    checked={scenario.smoker}
-                    onChange={(e) => setScenario((prev) => ({ ...prev, smoker: e.target.checked }))}
-                  />
-                  <span>Smoker</span>
-                </label>
               </div>
 
               <div className="what-if-actions">
